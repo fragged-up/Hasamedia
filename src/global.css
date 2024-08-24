@@ -86,7 +86,7 @@ body {
 .block-section {
   opacity: 1;
   border: 2px solid #05ace73e;
-  background: rgba(5, 172, 231, 0.025);
+  background: rgba(5, 172, 231, 0.045);
   backdrop-filter: blur(33px);
   -webkit-backdrop-filter: blur(33px);
 }
