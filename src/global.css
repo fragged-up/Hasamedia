@@ -231,3 +231,9 @@ input[type="checkbox"]:checked {
     linear-gradient(240deg, #00a8e2 0%, #00beff 23%, #ffffff 134%) 0% 0%
     no-repeat padding-box;
 }
+.dialog-text {
+  background-color: #330040;
+}
+.dialog-text > * {
+  color: white;
+}

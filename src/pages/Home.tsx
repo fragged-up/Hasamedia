@@ -3,6 +3,11 @@ import PrMobile from "@/assets/images/prMobile.png";
 import VideoSection from "../components/UI/VideoSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TPDialog from "../components/TermsAndPolicy/TPDialog";
+// import { lazy, Suspense } from "react";
+
+// const Block = lazy(() => import("../components/UI/Block"));
+// const VideoSection = lazy(() => import("../components/UI/VideoSection"));
 
 const blocksTexts = [
   {
@@ -81,6 +86,10 @@ const Home = () => {
             ))}
           </div>
         </main>
+        <div>
+          <p className="text-white">tpdialoy</p>
+          <TPDialog />
+        </div>
       </div>
       <Footer />
     </>

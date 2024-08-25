@@ -3,7 +3,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 
 interface GoogleSignInProps {
   onSuccess: (credentialResponse: any) => void;
-  onFailure: () => void;
+  onFailure: (err: any) => void;
 }
 
 const GoogleSignIn: React.FC<GoogleSignInProps> = ({
@@ -19,7 +19,7 @@ const GoogleSignIn: React.FC<GoogleSignInProps> = ({
     <div className="w-full">
       <button
         onClick={() => login()}
-        className="w-full flex items-center justify-center bg-[#606060] text-white font-semibold py-3 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
+        className="w-full flex items-center justify-center bg-[#606060] text-white font-semibold py-3 rounded-lg hover:bg-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
       >
         <svg
           className="w-6 h-6 mr-2"
