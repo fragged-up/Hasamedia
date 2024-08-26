@@ -4,16 +4,15 @@ interface GitHubSignInProps {
   onSuccess?: (response: any) => void;
   onFailure?: (error: any) => void;
 }
-
+const githubClientId: string = "Ov23li4c2WLYgkGFF6KN";
 const GitHubSignIn: React.FC<GitHubSignInProps> = ({
   onSuccess,
   onFailure,
 }) => {
   const handleGitHubSignIn = () => {
     // Start GitHub OAuth flow
-    window.location.href = `https://github.com/login/oauth/authorize?client_id=${
-      import.meta.env.VITE_GITHUB_CLIENT_ID
-    }&redirect_uri=http://localhost:5001/auth/github/callback`;
+
+    window.location.href = `https://github.com/login/oauth/authorize?client_id=${githubClientId}&scope=user:email,repo&redirect_uri=http://localhost:5001/auth/github/callback`;
   };
 
   // Example of handling the OAuth redirect response

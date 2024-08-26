@@ -237,3 +237,138 @@ input[type="checkbox"]:checked {
 .dialog-text > * {
   color: white;
 }
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.luxury-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Playfair Display", serif; /* Choose a luxurious font */
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: hsl(258, 45%, 25%); /* Luxurious gold color */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.luxury-char {
+  opacity: 0;
+  transform: translateY(100%);
+  display: inline-block;
+  animation: unveil 0.8s ease-out forwards;
+}
+
+@keyframes unveil {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-text {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-text:hover {
+  transform: scale(1.1);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #ff0055, #00ffaa, #0099ff);
+  background-size: 200% 200%;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s ease infinite;
+}
+
+.throw-in-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.throw-in-text {
+  font-size: 4rem;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.throw-in-left {
+  animation: throwInFromLeft 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.throw-in-right {
+  animation: throwInFromRight 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.5s;
+}
+
+.throw-in-top {
+  animation: throwInFromTop 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 1s;
+}
+
+.throw-in-bottom {
+  animation: throwInFromBottom 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.5s;
+}
+
+@keyframes throwInFromLeft {
+  0% {
+    transform: translateX(-100vw) rotate(-720deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes throwInFromRight {
+  0% {
+    transform: translateX(100vw) rotate(720deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes throwInFromTop {
+  0% {
+    transform: translateY(-100vh) rotate(-720deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes throwInFromBottom {
+  0% {
+    transform: translateY(100vh) rotate(720deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}

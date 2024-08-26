@@ -28,14 +28,12 @@ const Terms = () => {
         </p>
 
         <h2 className="text-2xl font-semibold mb-4">3. User Conduct</h2>
-        <p className="mb-4">
-          You must not use our website or services to:
-          <ul className="list-disc list-inside ml-4">
-            <li>Engage in unlawful, harmful, or fraudulent activity.</li>
-            <li>Infringe upon the intellectual property rights of others.</li>
-            <li>Distribute viruses or other harmful software.</li>
-          </ul>
-        </p>
+        <p className="mb-4">You must not use our website or services to:</p>
+        <ul className="list-disc list-inside ml-4">
+          <li>Engage in unlawful, harmful, or fraudulent activity.</li>
+          <li>Infringe upon the intellectual property rights of others.</li>
+          <li>Distribute viruses or other harmful software.</li>
+        </ul>
 
         <h2 className="text-2xl font-semibold mb-4">
           4. Limitation of Liability

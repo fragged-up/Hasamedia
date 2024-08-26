@@ -10,14 +10,13 @@ const DesktopHeader = () => {
   const [popUp, setPopUP] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const firstName = useSelector(
-    (state: RootState) => state.auth.user?.firstName
-  );
+  const user = useSelector((state: RootState) => state.auth.user); // Get the user object from Redux
 
   const handleLogout = () => {
     dispatch(logout()); // ביצוע logout
     navigate("/login"); // ניתוב לדף ההתחברות לאחר logout
   };
+
   return (
     <>
       <div className="bg-black">
@@ -40,7 +39,10 @@ const DesktopHeader = () => {
           <div className="container flex items-center gap-x-6 py-10">
             <div className="left-side flex justify-center items-center ml-8">
               <div className="desktop-logo-container flex justify-center items-center max-w-56">
-                <img src={desktopLogo} alt="desktopLogo" className="flex" />
+                <div className="fade-slide-up text-4xl text-white font-bold">
+                  {" "}
+                  <img src={desktopLogo} alt="desktopLogo" className="flex" />
+                </div>
               </div>
             </div>
 
@@ -68,11 +70,14 @@ const DesktopHeader = () => {
 
           <div className="right-side flex gap-5 pt-6 px-10">
             <div className="flex items-center justify-center gap-x-4">
-              {firstName ? (
+              {user ? (
                 <>
-                  <p className="text-white-secondary font-gilroy-regular text-base text-nowrap">
-                    Hello, {firstName}
-                  </p>
+                  <Link
+                    to={`/account/${user.id}`} // Dynamic link to the user's account page
+                    className="text-white-secondary font-gilroy-regular text-base text-nowrap"
+                  >
+                    Account
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="text-white-secondary font-gilroy-regular text-base text-nowrap"

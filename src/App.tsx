@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Loading from "./components/Loading";
 import axios from "axios";
 import LoginFailed from "./pages/LoginFailed";
+import AccountPage from "./pages/Account";
 
 export default function App() {
   const [user, setUser] = useState<any>(null);
@@ -22,8 +23,10 @@ export default function App() {
       const backendUrl = "http://localhost:5001/auth/login/success";
       const { data } = await axios.get(backendUrl, { withCredentials: true });
 
-      if (data?.user?.name) {
-        const fullName = data.user.name;
+      console.log("Data from backend:", data); // הוספת console.log להצגת התגובה מה-backend
+
+      if (data?.user) {
+        let fullName = data.user.name || data.user.login || "User";
         const firstNameExtracted = fullName.split(" ")[0];
 
         // שילוב השם הפרטי במידע המשתמש ושמירתו ב-Redux
@@ -73,6 +76,8 @@ export default function App() {
             path="/LoginFailed"
             element={failed ? <LoginFailed /> : <Navigate to="/" />}
           />
+          {/* Other routes */}
+          <Route path="/account/:id" element={<AccountPage />} />
           <Route path="/Templates" element={<Templates />} />
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Signup" element={<SignUp />} />
