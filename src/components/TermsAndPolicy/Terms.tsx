@@ -1,10 +1,8 @@
 const Terms = () => {
   return (
-    <div className="container bg-[#330040] mx-auto dialog-text">
+    <div className="container dialog-text">
       <div className="container mx-auto py-10 px-4">
-        <h1 className="text-4xl font-bold mb-6 text-green-500">
-          Terms of Service
-        </h1>
+        <h1 className="text-4xl font-bold mb-6 text-white">Terms of Service</h1>
 
         <p className="mb-4">
           Welcome to HasaMedia! These terms and conditions outline the rules and

@@ -11,6 +11,8 @@ import Loading from "./components/Loading";
 import axios from "axios";
 import LoginFailed from "./pages/LoginFailed";
 import AccountPage from "./pages/Account";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   const [user, setUser] = useState<any>(null);
@@ -79,6 +81,9 @@ export default function App() {
           {/* Other routes */}
           <Route path="/account/:id" element={<AccountPage />} />
           <Route path="/Templates" element={<Templates />} />
+          <Route path="/TermsOfService" element={<TermsOfService />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+
           <Route path="/ContactUs" element={<ContactUs />} />
           <Route path="/Signup" element={<SignUp />} />
           <Route path="/Login" element={<Login />} />

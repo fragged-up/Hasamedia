@@ -1,7 +1,7 @@
 const Policy = () => {
   return (
-    <div className="container dialog-text">
-      <h1>Privacy Policy</h1>
+    <div className="container bg-black dialog-text">
+      <h1 className="font-gilroy-bold text-3xl">Privacy Policy</h1>
       <p>
         Last updated: August 25, 2024 This Privacy Policy describes Our policies
         and procedures on the collection, use and disclosure of Your information

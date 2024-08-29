@@ -3,11 +3,7 @@ import PrMobile from "@/assets/images/prMobile.png";
 import VideoSection from "../components/UI/VideoSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import TPDialog from "../components/TermsAndPolicy/TPDialog";
-// import { lazy, Suspense } from "react";
-
-// const Block = lazy(() => import("../components/UI/Block"));
-// const VideoSection = lazy(() => import("../components/UI/VideoSection"));
+import Reviews from "@/components/UI/Reviews";
 
 const blocksTexts = [
   {
@@ -64,18 +60,22 @@ const Home = () => {
         <main className="bg-black">
           <section className="grid gap-y-16 my-12">
             <div className="rounded-lg w-full">
-              <VideoSection videoUrl="https://youtube.com" />
+              <VideoSection videoUrl="https://www.youtube.com" />
             </div>
             <div>
               <p className="font-gilroy-bold text-xl text-white-primary text-center">
                 Trusted by individuals & teams <br /> from all over the world.
               </p>
             </div>
-            <div className="flex justify-center items-center my-4">
-              <img src={PrMobile} alt="projectsImages" />
+            <div className="flex justify-center items-center my-4 scroll-container">
+              <img
+                src={PrMobile}
+                alt="projectsImages"
+                className="scrolling-image"
+              />
             </div>
           </section>
-          <div className="flex flex-col gap-y-12 justify-center items-center my-16">
+          <div className="flex flex-col gap-y-12 justify-center items-center my-32">
             {blocksTexts.map((e, index) => (
               <Block
                 key={index}
@@ -85,11 +85,21 @@ const Home = () => {
               />
             ))}
           </div>
+          <section className="bg-black w-4/5 mx-auto">
+            <div className="flex justify-center items-center">
+              <h1 className="font-gilroy-black text-white sm:text-[1.375rem] md:text-[3rem] lg:text-[5rem] text-center my-32">
+                What our partners say about us
+              </h1>
+            </div>
+            <div className="shady-container">
+              <div className="shady-top-effect"></div>
+              <div className="relative shady-bottom-effect scroll-content">
+                <Reviews />
+                <Reviews />
+              </div>
+            </div>
+          </section>
         </main>
-        <div>
-          <p className="text-white">tpdialoy</p>
-          <TPDialog />
-        </div>
       </div>
       <Footer />
     </>
