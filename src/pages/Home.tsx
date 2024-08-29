@@ -95,7 +95,7 @@ const Home = () => {
               <div className="shady-top-effect"></div>
               <div className="relative shady-bottom-effect scroll-content">
                 <Reviews />
-                <Reviews />
+                {/* <Reviews /> */}
               </div>
             </div>
           </section>
