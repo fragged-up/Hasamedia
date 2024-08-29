@@ -25,13 +25,10 @@ export default function App() {
       const backendUrl = "http://localhost:5001/auth/login/success";
       const { data } = await axios.get(backendUrl, { withCredentials: true });
 
-      console.log("Data from backend:", data); // הוספת console.log להצגת התגובה מה-backend
-
       if (data?.user) {
         let fullName = data.user.name || data.user.login || "User";
         const firstNameExtracted = fullName.split(" ")[0];
 
-        // שילוב השם הפרטי במידע המשתמש ושמירתו ב-Redux
         const userWithFirstName = {
           ...data.user,
           firstName: firstNameExtracted,
