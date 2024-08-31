@@ -1,45 +1,3 @@
-// import { useState } from "react";
-// import Hamburger from "@/assets/icons/hamburger-menu.svg";
-// import mobileLogo from "@/assets/images/logoMobile.png";
-// import lbImage from "@/assets/images/lightBlueDesk.png";
-
-// const MobileHeader = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setIsOpen(!isOpen);
-//   };
-//   return (
-//     <>
-//       <div className="relative hey">
-//         <header className="container py-6 px-8">
-//           <nav className="bg-black flex justify-between items-center">
-//             <div className="mobile-logo-container max-w-28">
-//               <img src={mobileLogo} alt="logoIcon" className="w-full" />
-//             </div>
-
-//             <div
-//               className="hamburger-container text-white focus:outline-none"
-//               onClick={toggleMenu}
-//             >
-//               <img src={Hamburger} alt="hamburgerIcon" />
-//             </div>
-//           </nav>
-//         </header>
-//         <div className="relative">
-//           <img
-//             src={lbImage}
-//             alt="Crazy Border"
-//             className="absolute h-10 min-w-full mt-[-3%] translate-y-4/4"
-//           />
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default MobileHeader;
-
 import { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import Hamburger from "@/assets/icons/hamburger-menu.svg";
@@ -54,11 +12,11 @@ const MobileHeader = () => {
   };
 
   return (
-    <>
-      <div className="relative hey">
-        <header className="container py-6 px-8">
-          <nav className="bg-black flex justify-between items-center">
-            <div className="mobile-logo-container max-w-28">
+    <div className="container">
+      <div className="relative">
+        <header className="min-w-full py-6 px-8 flex">
+          <nav className="bg-black flex justify-between items-center w-full">
+            <div className="mobile-logo-container max-sm:max-w-28">
               <img src={mobileLogo} alt="logoIcon" className="w-full" />
             </div>
 
@@ -70,13 +28,13 @@ const MobileHeader = () => {
             </div>
           </nav>
         </header>
-        <div className="relative">
+        {/* <div className="relative">
           <img
             src={lbImage}
             alt="Crazy Border"
             className="absolute h-10 min-w-full mt-[-3%] translate-y-4/4"
           />
-        </div>
+        </div> */}
 
         {/* Mobile Menu */}
         <div
@@ -130,7 +88,7 @@ const MobileHeader = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

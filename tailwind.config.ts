@@ -31,6 +31,9 @@ const config: Config = {
       fontFamily: {
         gilroy: ["Gilroy", "sans-serif"],
       },
+      screens: {
+        "max-sm": { max: "640px" },
+      },
     },
   },
   plugins: [

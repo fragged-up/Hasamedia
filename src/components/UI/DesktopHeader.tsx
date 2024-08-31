@@ -1,21 +1,10 @@
 import desktopLogo from "@/assets/images/logoDesktop.png";
 import lbImage from "@/assets/images/lightBlueDesk.png";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { logout } from "../../redux/slices/authSlice"; // ייבוא פונקציית logout
-import { RootState } from "../../redux/store"; // ייבוא RootState
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DesktopHeader = () => {
   const [popUp, setPopUP] = useState(true);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const user = useSelector((state: RootState) => state.auth.user); // Get the user object from Redux
-
-  const handleLogout = () => {
-    dispatch(logout()); // ביצוע logout
-    navigate("/login"); // ניתוב לדף ההתחברות לאחר logout
-  };
 
   return (
     <>
@@ -45,7 +34,6 @@ const DesktopHeader = () => {
                 </div>
               </div>
             </div>
-
             <nav className="flex justify-center items-center gap-x-6 pt-6">
               <Link
                 to="/product"
@@ -69,38 +57,6 @@ const DesktopHeader = () => {
           </div>
 
           <div className="right-side flex gap-5 pt-6 px-10">
-            <div className="flex items-center justify-center gap-x-4">
-              {user ? (
-                <>
-                  <Link
-                    to={`/account/${user.id}`} // Dynamic link to the user's account page
-                    className="text-white-secondary font-gilroy-regular text-base text-nowrap"
-                  >
-                    Account
-                  </Link>
-                  <button
-                    onClick={handleLogout}
-                    className="text-white-secondary font-gilroy-regular text-base text-nowrap"
-                  >
-                    Logout
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link to="/signup">
-                    <p className="text-white-secondary font-gilroy-regular text-base text-nowrap">
-                      SignUp
-                    </p>
-                  </Link>
-                  <Link to="/login">
-                    <p className="text-white-secondary font-gilroy-regular text-base text-nowrap">
-                      Login
-                    </p>
-                  </Link>
-                </>
-              )}
-            </div>
-
             <div className="desk-rev-btn flex justify-center items-center text-nowrap py-2 px-4 rounded-lg">
               <Link
                 to="/free-website-review"

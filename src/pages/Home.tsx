@@ -29,32 +29,34 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div className="w-full bg-black my-12">
+      <div className="w-full bg-black">
         <nav className="bg-black-primary">
-          <div className="md:py-4 lg:py-8">
-            <h1 className="gradient-hero-text font-gilroy-black md:text-3xl lg:text-[3rem] text-center py-4">
-              Build Grow, Manage.
-            </h1>
-            <h2 className="gradient-hero-text font-gilroy-black text-center md:text-base lg:text-3xl">
-              Your One-Step Solution for Digital Success.
-            </h2>
-          </div>
+          <div className="hero-wrapper">
+            <div className="md:py-4 lg:py-8">
+              <h1 className="gradient-hero-text font-gilroy-black md:text-3xl lg:text-[3rem] text-center py-4">
+                Build Grow, Manage.
+              </h1>
+              <h2 className="gradient-hero-text font-gilroy-black text-center md:text-base lg:text-3xl">
+                Your One-Step Solution for Digital Success.
+              </h2>
+            </div>
 
-          <div className="md:p-2 lg:py-0">
-            <p className="md:text-xs lg:text-2xl text-white-primary font-gilroy-bold text-center">
-              From Concept to Launch, We Empower Your Digital Journey.
-            </p>
-            <p className="md:text-[.625rem] lg:text-xl text-white-secondary md:font-gilroy-bold lg:font-gilroy-regular text-center lg:py-4">
-              Whether you’re starting from scratch or looking to enhance an
-              existing platform,
-              <br /> we provide a comprehensive suite of services to build,
-              grow, and manage your digital presence.
-            </p>
-          </div>
-          <div className="btn-container flex justify-center items-center my-4">
-            <button className="md:text-xs lg:text-xl py-1.5 px-6 font-gilroy-bold text-center recive-cta text-white-primary md:max-w-48 lg:max-w-96">
-              Receive Free Evaluation
-            </button>
+            <div className="md:p-2 lg:py-0">
+              <p className="md:text-xs lg:text-2xl text-white-primary font-gilroy-bold text-center">
+                From Concept to Launch, We Empower Your Digital Journey.
+              </p>
+              <p className="md:text-[.625rem] lg:text-xl text-white-secondary md:font-gilroy-bold lg:font-gilroy-regular text-center lg:py-4">
+                Whether you’re starting from scratch or looking to enhance an
+                existing platform,
+                <br /> we provide a comprehensive suite of services to build,
+                grow, and manage your digital presence.
+              </p>
+            </div>
+            <div className="btn-container flex justify-center items-center my-4">
+              <button className="md:text-xs lg:text-xl py-1.5 px-6 font-gilroy-bold text-center recive-cta text-white-primary md:max-w-48 lg:max-w-96">
+                Receive Free Evaluation
+              </button>
+            </div>
           </div>
         </nav>
         <main className="bg-black">
@@ -67,7 +69,7 @@ const Home = () => {
                 Trusted by individuals & teams <br /> from all over the world.
               </p>
             </div>
-            <div className="flex justify-center items-center my-4 scroll-container">
+            <div className="scroll-container flex justify-center items-center">
               <img
                 src={PrMobile}
                 alt="projectsImages"

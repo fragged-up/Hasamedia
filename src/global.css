@@ -30,20 +30,7 @@
   font-weight: 900; /* Black */
   font-style: normal;
 }
-/* Global Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-/* CSS Variables */
 :root {
   --clr-black-primary: #000000;
   --clr-dark-primary: #383838;
@@ -70,6 +57,21 @@ body {
   --color-error: #ef4444;
 }
 
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 .block-section {
   opacity: 1;
   border: 2px solid #05ace73e;
@@ -90,7 +92,7 @@ body {
 .review-btn-container {
   background: transparent
     linear-gradient(254deg, #00a8e2 0%, #00beff 23%, #ffffff 100%) 0% 0%
-    no-repeat padding-box;
+    no-repeat;
   opacity: 1;
 }
 /* End Buttons Containers Styling */
@@ -106,7 +108,7 @@ body {
 .recive-cta {
   background: transparent
     linear-gradient(249deg, #7a3bff 0%, #7a3bff 19%, #ad4eff 100%) 0% 0%
-    no-repeat padding-box;
+    no-repeat;
   box-shadow: 0px 1px 15px #ffffff79;
   border-radius: 6px;
   opacity: 1;
@@ -118,7 +120,7 @@ body {
 .footer-btn-cnt {
   background: transparent
     linear-gradient(254deg, #00a8e2 0%, #00beff 75%, #ffffff 100%) 0% 0%
-    no-repeat padding-box;
+    no-repeat;
   opacity: 1;
 }
 
@@ -205,38 +207,15 @@ input[type="checkbox"]:checked {
 .desk-rev-btn {
   background: transparent
     linear-gradient(240deg, #00a8e2 0%, #00beff 63%, #ffffff 134%) 0% 0%
-    no-repeat padding-box;
+    no-repeat;
 }
 .dialog-text {
   background-color: black;
   margin-inline: auto;
-  text-align: text-center;
+  text-align: center;
 }
 .dialog-text > * {
   color: white;
-}
-
-@media (max-width: 768px) {
-  .scrolling-container {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-  }
-
-  .scrolling-image {
-    display: inline-block;
-    position: relative;
-    animation: scroll-left-to-right 10s linear infinite;
-  }
-}
-
-@keyframes scroll-left-to-right {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
 }
 
 .scroll-content {
@@ -253,7 +232,7 @@ input[type="checkbox"]:checked {
 }
 
 .shady-container {
-  overflow-y: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   text-align: justify;
   max-width: 85%;
@@ -295,7 +274,7 @@ input[type="checkbox"]:checked {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
-  grid-auto-rows: minmax(100px, auto);
+  /* grid-auto-rows: minmax(100px, auto); */
 }
 
 .rev-box {
