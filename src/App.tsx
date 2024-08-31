@@ -11,13 +11,11 @@ export default function App() {
     <div className="w-full bg-black">
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home />} />
-
+          <Route path="/" element={<Home />} />
           <Route path="/account/:id" element={<AccountPage />} />
           <Route path="/Templates" element={<Templates />} />
           <Route path="/TermsOfService" element={<TermsOfService />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
-
           <Route path="/ContactUs" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
