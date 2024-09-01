@@ -33,24 +33,25 @@ const Home = () => {
         <nav className="bg-black-primary">
           <div className="hero-wrapper">
             <div className="text-hero-wrap mb-1 mt-16">
-              <div className="py-4">
-                <h1 className="gradient-hero-text max-md:text-3xl text-center font-gilroy-black sm:text-[3rem]">
+              <div className="py-4 lg:pb-6 lg:pt-8">
+                <h1 className="gradient-hero-text text-center text-[1.75rem] font-gilroy-black sm:text-[2.6rem] lg:text-[2.8rem]">
                   Build, Grow, Manage.
                 </h1>
-                <h2 className="gradient-hero-text max-md:text-base text-center font-gilroy-black sm:text-3xl">
+                <h2 className="gradient-hero-text text-center text-base font-gilroy-black sm:text-3xl">
                   Your One-Step Solution for Digital Success.
                 </h2>
               </div>
             </div>
 
-            <div className="mx-auto flex w-[90%] flex-col py-2">
-              <p className="max-md:text-xs text-center text-white font-gilroy-bold sm:text-2xl lg:text-2xl">
+            <div className="mx-auto flex w-[90%] flex-col py-0 sm:py-1">
+              <p className="text-center text-xs text-white font-gilroy-bold sm:text-xl lg:text-2xl">
                 From Concept to Launch, We Empower Your Digital Journey.
               </p>
-              <p className="max-md:text-[.625rem] max-md:text-white text-wrap text-center text-white font-gilroy-regular lg:text-xl">
+              <p className="max-md:text-white text-wrap text-center text-[.625rem] text-white font-gilroy-regular sm:text-sm lg:text-xl">
                 Whether you’re starting from scratch or looking to enhance an
-                existing platform, we provide a comprehensive suite of services
-                to build, grow, and manage your digital presence.
+                existing platform, <br className="max-md:hidden md:block" /> we
+                provide a comprehensive suite of services to build, grow, and
+                manage your digital presence.
               </p>
             </div>
             <div className="btn-container max-md:my-5 flex items-center justify-center sm:my-12">

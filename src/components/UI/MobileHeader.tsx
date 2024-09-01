@@ -32,7 +32,7 @@ const MobileHeader = () => {
         </nav>
       </header>
 
-      <div className="absolute bottom-[-2rem] left-0 z-10 h-[8rem] w-full overflow-hidden">
+      <div className="absolute bottom-[-2rem] left-0 z-10 h-[8rem] w-full">
         <img
           src={lbImage}
           alt="Crazy Border"

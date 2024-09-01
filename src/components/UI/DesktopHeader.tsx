@@ -13,7 +13,7 @@ const DesktopHeader = () => {
           <img
             src={lbImage}
             alt="Crazy Border"
-            className="absolute top-16 mx-auto flex min-w-full translate-y-9 lg:max-h-[10rem] xl:max-h-[14.2rem] xl:translate-y-0"
+            className="absolute top-16 mx-auto flex min-w-full translate-y-9 lg:max-h-[10rem] xl:max-h-[14rem] xl:translate-y-0"
           />
         </div>
         {popUp && (
