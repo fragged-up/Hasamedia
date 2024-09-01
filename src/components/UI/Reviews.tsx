@@ -67,7 +67,7 @@ const reviewEight = {
 
 const Reviews = () => {
   return (
-    <div className="rev-main-container">
+    <div className="grid auto-rows-min grid-cols-1 gap-16 lg:grid-cols-3">
       <div className="row-one space-y-16">
         <ReviewBox
           avatar={reviewOne.avatar}

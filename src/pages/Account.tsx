@@ -14,7 +14,7 @@ const AccountPage = () => {
         <h1 className="text-2xl font-bold">Account Details</h1>
         {/* {userId ? <p>Your User ID: {userId}</p> : <p>You are not logged in.</p>} */}
         {/* Render more account details here */}
-        <div className="fade-slide-up text-4xl text-white font-bold">
+        <div className="fade-slide-up text-4xl font-bold text-white">
           Hello, World!
         </div>
         <div>

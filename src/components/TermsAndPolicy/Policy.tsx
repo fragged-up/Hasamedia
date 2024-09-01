@@ -1,7 +1,7 @@
 const Policy = () => {
   return (
-    <div className="container bg-black dialog-text">
-      <h1 className="font-gilroy-bold text-3xl">Privacy Policy</h1>
+    <div className="dialog-text container bg-black">
+      <h1 className="text-3xl font-gilroy-bold">Privacy Policy</h1>
       <p>
         Last updated: August 25, 2024 This Privacy Policy describes Our policies
         and procedures on the collection, use and disclosure of Your information
@@ -104,7 +104,7 @@ const Policy = () => {
           <li>Usage Data</li>
         </ul>
       </div>
-      <div className="usuage-data space-y-4 grid grid-rows-auto">
+      <div className="usuage-data grid-rows-auto grid space-y-4">
         <h1>Usage Data</h1>
         <p>Usage Data is collected automatically when using the Service.</p>
         <p>
@@ -296,7 +296,7 @@ const Policy = () => {
           information for any other purpose with Your consent.
         </li>
       </div>
-      <div className="retention grid grid-auto-rows space-y-4">
+      <div className="retention grid-auto-rows grid space-y-4">
         <h1>Retention of Your Personal Data</h1>
         <p>
           The Company will retain Your Personal Data only for as long as is
@@ -314,7 +314,7 @@ const Policy = () => {
           to retain this data for longer time periods.
         </p>
       </div>
-      <div className="transfer grid grid-auto-rows">
+      <div className="transfer grid-auto-rows grid">
         <h1>Transfer of Your Personal Data</h1>
         <p>
           Your information, including Personal Data, is processed at the
@@ -337,7 +337,7 @@ const Policy = () => {
           including the security of Your data and other personal information.
         </p>
       </div>
-      <div className="delete-your-personal-data grid grid-autos-rows space-y-3">
+      <div className="delete-your-personal-data grid-autos-rows grid space-y-3">
         <h1>Delete Your Personal Data</h1>
         <p>
           You have the right to delete or request that We assist in deleting the
@@ -408,7 +408,7 @@ const Policy = () => {
         </div>
       </div>
       <footer>
-        <div className="children-privacy grid grid-rows-auto space-y-3">
+        <div className="children-privacy grid-rows-auto grid space-y-3">
           <h1>Children's Privacy</h1>
           <p>
             Our Service does not address anyone under the age of 13. We do not
@@ -426,7 +426,7 @@ const Policy = () => {
             information.
           </p>
         </div>
-        <div className="links-to-other-websites grid grid-rows-auto space-y-3">
+        <div className="links-to-other-websites grid-rows-auto grid space-y-3">
           <h2>Links to Other Websites</h2>
           <p>
             Our Service may contain links to other websites that are not

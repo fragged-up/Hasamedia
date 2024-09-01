@@ -32,52 +32,61 @@ const Home = () => {
       <div className="w-full bg-black">
         <nav className="bg-black-primary">
           <div className="hero-wrapper">
-            <div className="md:py-4 lg:py-8">
-              <h1 className="gradient-hero-text font-gilroy-black md:text-3xl lg:text-[3rem] text-center py-4">
-                Build Grow, Manage.
-              </h1>
-              <h2 className="gradient-hero-text font-gilroy-black text-center md:text-base lg:text-3xl">
-                Your One-Step Solution for Digital Success.
-              </h2>
+            <div className="text-hero-wrap mb-1 mt-16">
+              <div className="py-4">
+                <h1 className="gradient-hero-text max-md:text-3xl text-center font-gilroy-black sm:text-[3rem]">
+                  Build, Grow, Manage.
+                </h1>
+                <h2 className="gradient-hero-text max-md:text-base text-center font-gilroy-black sm:text-3xl">
+                  Your One-Step Solution for Digital Success.
+                </h2>
+              </div>
             </div>
 
-            <div className="md:p-2 lg:py-0">
-              <p className="md:text-xs lg:text-2xl text-white-primary font-gilroy-bold text-center">
+            <div className="mx-auto flex w-[90%] flex-col py-2">
+              <p className="max-md:text-xs text-center text-white font-gilroy-bold sm:text-2xl lg:text-2xl">
                 From Concept to Launch, We Empower Your Digital Journey.
               </p>
-              <p className="md:text-[.625rem] lg:text-xl text-white-secondary md:font-gilroy-bold lg:font-gilroy-regular text-center lg:py-4">
+              <p className="max-md:text-[.625rem] max-md:text-white text-wrap text-center text-white font-gilroy-regular lg:text-xl">
                 Whether you’re starting from scratch or looking to enhance an
-                existing platform,
-                <br /> we provide a comprehensive suite of services to build,
-                grow, and manage your digital presence.
+                existing platform, we provide a comprehensive suite of services
+                to build, grow, and manage your digital presence.
               </p>
             </div>
-            <div className="btn-container flex justify-center items-center my-4">
-              <button className="md:text-xs lg:text-xl py-1.5 px-6 font-gilroy-bold text-center recive-cta text-white-primary md:max-w-48 lg:max-w-96">
+            <div className="btn-container max-md:my-5 flex items-center justify-center sm:my-12">
+              <button className="recive-cta max-md:max-w-48 max-md:text-xs px-6 py-1.5 text-center text-white-primary font-gilroy-bold sm:max-w-96 sm:text-xl">
                 Receive Free Evaluation
               </button>
             </div>
           </div>
         </nav>
         <main className="bg-black">
-          <section className="grid gap-y-16 my-12">
-            <div className="rounded-lg w-full">
+          <section className="my-12 grid gap-y-16">
+            <div className="w-full rounded-lg">
               <VideoSection videoUrl="https://www.youtube.com" />
             </div>
             <div>
-              <p className="font-gilroy-bold text-xl text-white-primary text-center">
-                Trusted by individuals & teams <br /> from all over the world.
+              <p className="text-center text-xl text-white-primary font-gilroy-bold md:text-2xl">
+                Trusted by individuals & teams <br className="md:hidden" /> from
+                all over the world.
               </p>
             </div>
-            <div className="scroll-container flex justify-center items-center">
-              <img
-                src={PrMobile}
-                alt="projectsImages"
-                className="scrolling-image"
-              />
+            <div className="scroll-right-container flex items-center justify-center">
+              <div className="scroll-right-content">
+                <img
+                  src={PrMobile}
+                  alt="projectsImages"
+                  className="scroll-right-image"
+                />
+                <img
+                  src={PrMobile}
+                  alt="projectsImages"
+                  className="scroll-right-image md:hidden"
+                />
+              </div>
             </div>
           </section>
-          <div className="flex flex-col gap-y-12 justify-center items-center my-32">
+          <div className="my-32 flex flex-col items-center justify-center gap-y-12">
             {blocksTexts.map((e, index) => (
               <Block
                 key={index}
@@ -87,17 +96,27 @@ const Home = () => {
               />
             ))}
           </div>
-          <section className="bg-black w-4/5 mx-auto">
-            <div className="flex justify-center items-center">
-              <h1 className="font-gilroy-black text-white sm:text-[1.375rem] md:text-[3rem] lg:text-[5rem] text-center my-32">
-                What our partners say about us
+          <section className="mx-auto w-4/5 bg-black">
+            <div className="flex items-center justify-center">
+              <h1 className="my-32 text-nowrap text-center text-2xl text-white font-gilroy-black sm:text-4xl lg:text-[3rem]">
+                What our customers say about us
               </h1>
             </div>
-            <div className="shady-container">
-              <div className="shady-top-effect"></div>
-              <div className="relative shady-bottom-effect scroll-content">
-                <Reviews />
-                {/* <Reviews /> */}
+            <div className="infinite-scroll-container">
+              <div className="scroll-shadow-top"></div>
+              <div className="scroll-shadow-bottom">
+                <div className="scroll-track">
+                  <div className="scroll-item">
+                    <Reviews />
+                    <Reviews />
+                    <Reviews />
+                  </div>
+                  <div className="scroll-item">
+                    <Reviews />
+                    <Reviews />
+                    <Reviews />
+                  </div>
+                </div>
               </div>
             </div>
           </section>

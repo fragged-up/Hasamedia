@@ -11,27 +11,29 @@ const ReviewBox: React.FC<ReviewBoxProps> = ({
   reviewText,
 }) => {
   return (
-    <div className="rev-box">
-      <div className="flex gap-4">
+    <div className="w-full rounded-3xl border border-[#383838] bg-black p-6 lg:p-5">
+      <div className="flex items-stretch gap-4">
         <div className="review-image-cont">
           <img
             src={avatar}
             alt={`${name}'s avatar`}
-            className="max-w-[2.5rem] max-h-[2.5rem] rounded-full"
+            className="max-h-[2.5rem] max-w-[2.5rem] rounded-full"
           />
         </div>
-        <div className="text-box">
-          <h3 className="name text-base font-gilroy-medium text-white">
+        <div className="flex flex-col text-left sm:pt-1">
+          <h3 className="name text-left text-base text-white font-gilroy-medium lg:text-sm xl:text-base">
             {name}
           </h3>
-          <p className="role font-gilroy-medium text-sm text-white-secondary">
+          <p className="role text-sm text-white-secondary font-gilroy-medium lg:text-sm xl:text-base">
             {role}
           </p>
         </div>
       </div>
 
-      <div className="py-6">
-        <p className="font-gilroy-medium text-lg text-white">{reviewText}</p>
+      <div className="box-text flex py-3 text-left">
+        <p className="text-lg text-white font-gilroy-medium lg:text-base xl:text-xl">
+          {reviewText}
+        </p>
       </div>
     </div>
   );

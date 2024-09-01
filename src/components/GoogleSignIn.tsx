@@ -19,10 +19,10 @@ const GoogleSignIn: React.FC<GoogleSignInProps> = ({
     <div className="w-full">
       <button
         onClick={() => login()}
-        className="w-full flex items-center justify-center bg-[#606060] text-white font-semibold py-3 rounded-lg hover:bg-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
+        className="flex w-full items-center justify-center rounded-lg bg-[#606060] py-3 font-semibold text-white transition duration-150 ease-in-out hover:bg-gray-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
       >
         <svg
-          className="w-6 h-6 mr-2"
+          className="mr-2 h-6 w-6"
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
         >

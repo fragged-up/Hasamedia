@@ -63,13 +63,39 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* CSS Variables */
 
 html,
 body {
   height: 100%;
   width: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 .block-section {
@@ -98,11 +124,13 @@ body {
 /* End Buttons Containers Styling */
 
 .gradient-hero-text {
-  background: linear-gradient(72deg, #ffffff 0%, #808080 100%);
+  background: transparent linear-gradient(75deg, #ffffff 0%, #808080 100%) 0% 0%
+    no-repeat padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   opacity: 1;
+  font-stretch: extra-expanded;
 }
 
 .recive-cta {
@@ -217,21 +245,45 @@ input[type="checkbox"]:checked {
 .dialog-text > * {
   color: white;
 }
-
-.scroll-content {
-  animation: scroll 10s linear infinite;
+.box-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
+@media (max-width: 768px) {
+  .scroll-right-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
   }
-  100% {
-    transform: translateY(-50%);
+
+  .scroll-right-content {
+    display: flex;
+    width: calc(200% + 20px);
+    scroll-behavior: smooth;
+    animation: scroll-right-animation 4s linear infinite;
+  }
+
+  .scroll-right-image {
+    width: 100%;
+    height: auto;
+    margin-right: 1.25rem;
+  }
+
+  @keyframes scroll-right-animation {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
 }
 
-.shady-container {
+.infinite-scroll-container {
   overflow-y: hidden;
   scroll-behavior: smooth;
   text-align: justify;
@@ -242,7 +294,7 @@ input[type="checkbox"]:checked {
   background-color: rgba(0, 0, 0, 1);
 }
 
-.shady-top-effect {
+.scroll-shadow-top {
   width: 100%;
   height: 6rem;
   position: absolute;
@@ -255,7 +307,7 @@ input[type="checkbox"]:checked {
   );
 }
 
-.shady-bottom-effect::after {
+.scroll-shadow-bottom::after {
   width: 100%;
   height: 18rem;
   content: "";
@@ -270,16 +322,32 @@ input[type="checkbox"]:checked {
   );
 }
 
-.rev-main-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
-  /* grid-auto-rows: minmax(100px, auto); */
+.scroll-shadow-bottom {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
-.rev-box {
-  background-color: black;
-  border: 1px solid #383838;
-  border-radius: 1.5rem;
-  padding: 2rem;
+.scroll-track {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-track-animation 100s linear infinite;
+}
+
+.scroll-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Adjust the gap between Reviews components */
+  padding: 1rem 0; /* Optional padding around the entire item */
+  height: 100%; /* Each scroll item takes the full height of the container */
+}
+
+@keyframes scroll-track-animation {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }

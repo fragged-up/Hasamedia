@@ -9,8 +9,15 @@ const DesktopHeader = () => {
   return (
     <>
       <div className="bg-black">
+        <div className="relative max-h-[23rem]">
+          <img
+            src={lbImage}
+            alt="Crazy Border"
+            className="absolute top-16 mx-auto flex min-w-full translate-y-9 lg:max-h-[10rem] xl:max-h-[14.2rem] xl:translate-y-0"
+          />
+        </div>
         {popUp && (
-          <div className="bg-black flex justify-center items-center py-2">
+          <div className="flex items-center justify-center bg-black py-2">
             <input
               type="checkbox"
               name="hiring"
@@ -18,62 +25,56 @@ const DesktopHeader = () => {
               className="mr-2"
               onClick={() => setPopUP(false)}
             />
-            <p className="text-base font-gilroy-regular text-white-secondary text-center">
+            <p className="text-center text-base text-white-secondary font-gilroy-regular">
               We are hiring soon keep in touch, we may be open for business in
               the US soon
             </p>
           </div>
         )}
-        <header className="bg-black-primary shadow-md flex justify-between items-center relative">
+
+        <header className="relative flex items-center justify-between bg-black-primary shadow-md">
           <div className="container flex items-center gap-x-6 py-10">
-            <div className="left-side flex justify-center items-center ml-8">
-              <div className="desktop-logo-container flex justify-center items-center max-w-56">
-                <div className="fade-slide-up text-4xl text-white font-bold">
+            <div className="left-side ml-8 flex items-center justify-center">
+              <div className="desktop-logo-container flex max-w-56 items-center justify-center">
+                <div className="fade-slide-up text-4xl font-bold text-white">
                   {" "}
                   <img src={desktopLogo} alt="desktopLogo" className="flex" />
                 </div>
               </div>
             </div>
-            <nav className="flex justify-center items-center gap-x-6 pt-6">
+            <nav className="flex items-center justify-center gap-x-6 pt-6">
               <Link
                 to="/product"
-                className="text-white-secondary font-gilroy-regular text-base"
+                className="text-base text-white-secondary font-gilroy-regular"
               >
                 Product
               </Link>
               <Link
                 to="/templates"
-                className="text-white-secondary font-gilroy-regular text-base"
+                className="text-base text-white-secondary font-gilroy-regular"
               >
                 Templates
               </Link>
               <Link
                 to="/contact"
-                className="text-white-secondary font-gilroy-regular text-base"
+                className="text-base text-white-secondary font-gilroy-regular"
               >
                 Contact Us
               </Link>
             </nav>
           </div>
 
-          <div className="right-side flex gap-5 pt-6 px-10">
-            <div className="desk-rev-btn flex justify-center items-center text-nowrap py-2 px-4 rounded-lg">
+          <div className="right-side flex gap-5 px-10 pt-6">
+            <div className="desk-rev-btn flex items-center justify-center text-nowrap rounded-lg px-4 py-2">
               <Link
                 to="/free-website-review"
-                className="text-white font-gilroy-black transition duration-300 text-center"
+                className="text-center text-white transition duration-300 font-gilroy-black"
               >
                 Free Website Review
               </Link>
             </div>
           </div>
         </header>
-        <div>
-          <img
-            src={lbImage}
-            alt="Crazy Border"
-            className="absolute h-10 min-w-full mt-[-3%] translate-y-4/4"
-          />
-        </div>
       </div>
     </>
   );

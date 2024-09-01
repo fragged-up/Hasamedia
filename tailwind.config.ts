@@ -32,7 +32,7 @@ const config: Config = {
         gilroy: ["Gilroy", "sans-serif"],
       },
       screens: {
-        "max-sm": { max: "640px" },
+        "max-md": { max: "768px" },
       },
     },
   },

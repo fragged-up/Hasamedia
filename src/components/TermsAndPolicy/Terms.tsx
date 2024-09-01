@@ -1,22 +1,22 @@
 const Terms = () => {
   return (
-    <div className="container dialog-text">
-      <div className="container mx-auto py-10 px-4">
-        <h1 className="text-4xl font-bold mb-6 text-white">Terms of Service</h1>
+    <div className="dialog-text container">
+      <div className="container mx-auto px-4 py-10">
+        <h1 className="mb-6 text-4xl font-bold text-white">Terms of Service</h1>
 
         <p className="mb-4">
           Welcome to HasaMedia! These terms and conditions outline the rules and
           regulations for the use of HasaMedia's website, located at HasaMedia.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">1. Terms</h2>
+        <h2 className="mb-4 text-2xl font-semibold">1. Terms</h2>
         <p className="mb-4">
           By accessing this website, we assume you accept these terms and
           conditions. Do not continue to use HasaMedia if you do not agree to
           take all of the terms and conditions stated on this page.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">2. License</h2>
+        <h2 className="mb-4 text-2xl font-semibold">2. License</h2>
         <p className="mb-4">
           Unless otherwise stated, HasaMedia and/or its licensors own the
           intellectual property rights for all material on www.hasamedia.io. All
@@ -25,15 +25,15 @@ const Terms = () => {
           these terms and conditions.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">3. User Conduct</h2>
+        <h2 className="mb-4 text-2xl font-semibold">3. User Conduct</h2>
         <p className="mb-4">You must not use our website or services to:</p>
-        <ul className="list-disc list-inside ml-4">
+        <ul className="ml-4 list-inside list-disc">
           <li>Engage in unlawful, harmful, or fraudulent activity.</li>
           <li>Infringe upon the intellectual property rights of others.</li>
           <li>Distribute viruses or other harmful software.</li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mb-4">
+        <h2 className="mb-4 text-2xl font-semibold">
           4. Limitation of Liability
         </h2>
         <p className="mb-4">
@@ -44,7 +44,7 @@ const Terms = () => {
           or any other direct or indirect, consequential and incidental damages.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">5. Revisions and Errata</h2>
+        <h2 className="mb-4 text-2xl font-semibold">5. Revisions and Errata</h2>
         <p className="mb-4">
           The materials appearing on HasaMedia's website could include
           technical, typographical, or photographic errors. HasaMedia does not
@@ -53,14 +53,14 @@ const Terms = () => {
           contained on its website at any time without notice.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">6. Governing Law</h2>
+        <h2 className="mb-4 text-2xl font-semibold">6. Governing Law</h2>
         <p className="mb-4">
           These terms and conditions are governed by and construed in accordance
           with the laws of US,California and you irrevocably submit to the
           exclusive jurisdiction of the courts in that location.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">7. Changes to the Terms</h2>
+        <h2 className="mb-4 text-2xl font-semibold">7. Changes to the Terms</h2>
         <p className="mb-4">
           HasaMedia reserves the right to revise these terms of service at any
           time without notice. By using this website you are agreeing to be

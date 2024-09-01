@@ -1,48 +1,48 @@
 import FooterLogo from "@/assets/images/logoFooterMobile.png";
 const MobielFooter = () => {
   return (
-    <footer className="container bg-black-primary grid grid-rows-[auto]">
-      <header className="wrapper px-12 py-12 space-y-6 ">
+    <footer className="container grid grid-rows-[auto] bg-black-primary">
+      <header className="wrapper space-y-6 px-12 py-12">
         <div className="footer-logo-container max-w-48">
           <div className="footer-logo"></div>
         </div>
 
         <div className="w-full">
-          <button className="w-full footer-btn-cnt text-center text-sm font-gilroy-black text-white-primary py-2 px-8 rounded-lg">
+          <button className="footer-btn-cnt w-full rounded-lg px-8 py-2 text-center text-sm text-white-primary font-gilroy-black">
             Get My Free Review
           </button>
         </div>
       </header>
-      <nav className="grid grid-cols-2 px-8 border-y border-dark-secondary py-16">
+      <nav className="grid grid-cols-2 border-y border-dark-secondary px-8 py-16">
         <div className="left-side grid-cols-1">
           <div>
-            <h4 className="text-white-primary font-gilroy-bold text-sm">
+            <h4 className="text-sm text-white-primary font-gilroy-bold">
               Resources
             </h4>
-            <div className="py-3 space-y-1">
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+            <div className="space-y-1 py-3">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Blog
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Contact
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 About
               </p>
             </div>
           </div>
           <div>
-            <h4 className="text-white-primary font-gilroy-bold text-sm">
+            <h4 className="text-sm text-white-primary font-gilroy-bold">
               Legal
             </h4>
-            <div className="py-3 space-y-1">
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+            <div className="space-y-1 py-3">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Privacy policy
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Terms and Conditions
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Cookie Settings
               </p>
             </div>
@@ -50,34 +50,34 @@ const MobielFooter = () => {
         </div>
         <div className="right-side grid-cols-2">
           <div className="right-side-block">
-            <h4 className="text-white-primary font-gilroy-bold text-sm">
+            <h4 className="text-sm text-white-primary font-gilroy-bold">
               Social Media
             </h4>
-            <div className="py-4 space-y-1">
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+            <div className="space-y-1 py-4">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Facebook
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Instagram
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Twitter
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Linkedin
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Tiktok
               </p>
-              <p className="text-white-secondary text-xs font-gilroy-regular">
+              <p className="text-xs text-white-secondary font-gilroy-regular">
                 Youtube
               </p>
             </div>
           </div>
         </div>
       </nav>
-      <div className="flex justify-center items-center py-8">
-        <p className="text-white-primary font-gilroy-medium text-center text-xs">
+      <div className="flex items-center justify-center py-8">
+        <p className="text-center text-xs text-white-primary font-gilroy-medium">
           &copy; 2024 Hasa Media LLC. All rights reserved.
         </p>
       </div>
