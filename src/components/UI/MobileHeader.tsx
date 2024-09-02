@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
 import Hamburger from "@/assets/icons/hamburger-menu.svg";
-// import mobileLogo from "@/assets/images/logoMobile.png";
 import lbImage from "@/assets/images/BorderTwo.png";
 
 const MobileHeader = () => {
@@ -21,8 +20,9 @@ const MobileHeader = () => {
               type="checkbox"
               name="hiring"
               id="hiring"
-              className=""
+              className="cursor-pointer"
               onClick={() => setPopUP(false)}
+              onTouchStart={() => setPopUP(false)}
             />
             <p className="text-[.625rem] text-white font-gilroy-medium">
               We are hiring soon!
@@ -37,17 +37,13 @@ const MobileHeader = () => {
         <header className="relative z-20 flex border-b border-[rgba(187,187,187,0.5)] bg-black px-6 pb-6 pt-3">
           <nav className="my-auto flex w-full items-center justify-between">
             <div className="mobile-logo-container max-h-[6.3rem] w-full max-w-32 sm:max-w-40">
-              <div className="flex h-7 w-full bg-header-logo-mobile bg-contain bg-no-repeat object-fill sm:h-10"></div>
-              {/* <img
-                src={mobileLogo}
-                alt="logoIcon"
-                className="w-full max-md:max-w-28"
-                /> */}
+              <div className="flex h-[1.985rem] w-full bg-header-logo-mobile bg-contain bg-no-repeat object-fill sm:h-10"></div>
             </div>
 
             <div
-              className="hamburger-container text-white focus:outline-none"
+              className="hamburger-container z-20 cursor-pointer text-white"
               onClick={toggleMenu}
+              onTouchStart={toggleMenu}
             >
               <img src={Hamburger} alt="hamburgerIcon" />
             </div>
@@ -72,42 +68,48 @@ const MobileHeader = () => {
           <Link
             to="/"
             onClick={toggleMenu}
-            className="text-2xl font-semibold text-white hover:text-purple-400"
+            onTouchStart={toggleMenu}
+            className="cursor-pointer text-2xl font-semibold text-white hover:text-purple-400"
           >
             Home
           </Link>
           <Link
             to="/Product"
             onClick={toggleMenu}
-            className="text-2xl font-semibold text-white hover:text-purple-400"
+            onTouchStart={toggleMenu}
+            className="cursor-pointer text-2xl font-semibold text-white hover:text-purple-400"
           >
             Product
           </Link>
           <Link
             to="/Templates"
             onClick={toggleMenu}
-            className="text-2xl font-semibold text-white hover:text-purple-400"
+            onTouchStart={toggleMenu}
+            className="cursor-pointer text-2xl font-semibold text-white hover:text-purple-400"
           >
             Templates
           </Link>
           <Link
             to="/ContactUs"
             onClick={toggleMenu}
-            className="text-2xl font-semibold text-white hover:text-purple-400"
+            onTouchStart={toggleMenu}
+            className="cursor-pointer text-2xl font-semibold text-white hover:text-purple-400"
           >
             Contact Us
           </Link>
           <Link
             to="/SignUp"
             onClick={toggleMenu}
-            className="text-2xl font-semibold text-white hover:text-purple-400"
+            onTouchStart={toggleMenu}
+            className="cursor-pointer text-2xl font-semibold text-white hover:text-purple-400"
           >
             Sign Up
           </Link>
           <Link
             to="/Login"
             onClick={toggleMenu}
-            className="text-2xl font-semibold text-white hover:text-purple-400"
+            onTouchStart={toggleMenu}
+            className="cursor-pointer text-2xl font-semibold text-white hover:text-purple-400"
           >
             Login
           </Link>
