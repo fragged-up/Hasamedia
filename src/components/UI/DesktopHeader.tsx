@@ -8,7 +8,7 @@ const DesktopHeader = () => {
 
   return (
     <>
-      <div className="bg-black">
+      <div className="fixed z-50 w-full">
         <div className="relative max-h-[23rem]">
           <img
             src={lbImage}
@@ -32,7 +32,7 @@ const DesktopHeader = () => {
           </div>
         )}
 
-        <header className="relative flex items-center justify-between bg-black-primary shadow-md">
+        <header className="relative flex items-center justify-between border-b border-[rgba(187,187,187,0.5)] bg-black-primary shadow-md">
           <div className="container flex items-center gap-x-6 py-10">
             <div className="left-side ml-8 flex items-center justify-center">
               <div className="desktop-logo-container flex max-w-56 items-center justify-center">

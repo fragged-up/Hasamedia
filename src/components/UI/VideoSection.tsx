@@ -12,12 +12,17 @@ const VideoSection = ({ videoUrl }: videoUrlProps) => {
   };
 
   return (
-    <div className="">
-      <div className="video-section rounded-lg">
-        <div className={`video-container ${isPlaying ? "playing" : ""}`}>
+    <div className="mx-auto w-[80%]">
+      <div className="video-section aspect-video max-h-[38.56rem] max-w-[68.25rem] rounded-xl">
+        <div
+          className={`video-container max-h-[31.625rem] max-w-[56rem] ${isPlaying ? "playing" : ""}`}
+        >
           {!isPlaying && (
-            <button className="play-button" onClick={handlePlayButtonClick}>
-              ▶️
+            <button
+              className="play-button inset absolute"
+              onClick={handlePlayButtonClick}
+            >
+              {/* ▶️ */}
             </button>
           )}
           {isPlaying && (

@@ -4,6 +4,16 @@ const config: Config = {
   content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "header-logo-mobile": "url('./assets/images/logoMobile.png')",
+      },
+      backgroundSize: {
+        "header-logo-mobile": "100%",
+      },
+      backgroundPosition: {
+        "header-logo-mobile": "center",
+      },
+
       colors: {
         "black-primary": "var(--clr-black-primary)",
         "dark-primary": "var(--clr-dark-primary)",
@@ -33,6 +43,7 @@ const config: Config = {
       },
       screens: {
         "max-md": { max: "768px" },
+        "max-sm": { max: "640px" },
       },
     },
   },

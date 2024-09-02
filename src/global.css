@@ -152,11 +152,14 @@ h6 {
 }
 
 .footer-logo {
-  background-image: url("assets/images/logoFooterMobile.png");
-  background-size: 100%;
-  background-position: center;
+  background-image: url("@/assets/images/logoFooterMobile.png");
   background-repeat: no-repeat;
-  height: 3rem;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 246px;
+  max-height: 46px;
 }
 
 input[type="checkbox"] {
@@ -179,21 +182,15 @@ input[type="checkbox"]:checked {
   align-items: center;
   border: 1px solid rgba(5, 172, 231, 0.4);
   margin-inline: auto;
-  width: 80%;
+  aspect-ratio: 16/9;
   padding: 2rem;
-}
-@media (min-width: 1024px) {
-  .video-section {
-    padding: 4rem;
-    max-width: 60%;
-  }
 }
 
 .video-container {
-  position: relative;
+  aspect-ratio: 16 / 9;
   width: 100%;
-  max-width: 800px;
   background-color: black;
+  position: relative;
   border-radius: 20px;
   border: 0.3px solid #8900ff;
   box-shadow: 0 0 60px 10px rgba(5, 172, 231, 0.4);
@@ -204,27 +201,28 @@ input[type="checkbox"]:checked {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 18rem;
-  max-height: 18rem;
 }
-@media (min-width: 1024px) {
-  .video-container {
-    height: 20rem;
-    max-height: 20rem;
-  }
-}
+
 .play-button {
-  font-size: 4rem;
-  color: hsl(0, 1%, 22%);
-  background: none;
+  background-image: url("@/assets/icons/PlayButton.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 85px;
+  height: 85px;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   z-index: 2;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .custom-video {
-  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
   height: 100%;
   border-radius: 20px;
   z-index: 2;
@@ -261,7 +259,8 @@ input[type="checkbox"]:checked {
 
   .scroll-right-content {
     display: flex;
-    width: calc(200% + 20px);
+    width: max-content;
+    gap: 2rem;
     scroll-behavior: smooth;
     animation: scroll-right-animation 4s linear infinite;
   }
@@ -269,15 +268,15 @@ input[type="checkbox"]:checked {
   .scroll-right-image {
     width: 100%;
     height: auto;
-    margin-right: 1.25rem;
+    flex-shrink: 0;
   }
 
   @keyframes scroll-right-animation {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(0%);
+      transform: translateX(calc(-100% - 2rem));
     }
   }
 }
@@ -297,7 +296,7 @@ input[type="checkbox"]:checked {
   width: 100%;
   height: 6rem;
   position: absolute;
-  z-index: 100;
+  z-index: 40;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 5%,
@@ -305,32 +304,31 @@ input[type="checkbox"]:checked {
     rgba(0, 0, 0, 0) 100%
   );
 }
-
-.scroll-shadow-bottom::after {
-  width: 100%;
-  height: 18rem;
-  content: "";
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1) 25%,
-    rgba(0, 0, 0, 0.5) 75%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
 .scroll-shadow-bottom {
   position: relative;
   height: 100%;
   overflow: hidden;
 }
+.scroll-shadow-bottom::after {
+  width: 100%;
+  height: 2rem;
+  content: "";
+  position: absolute;
+  z-index: 40;
+  bottom: 0;
+  border: 250px solid yellow;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
 
 .scroll-track {
   display: flex;
   flex-direction: column;
-  animation: scroll-track-animation 100s linear infinite;
+  animation: scroll-track-animation 200s linear infinite;
 }
 
 .scroll-item {
@@ -349,4 +347,52 @@ input[type="checkbox"]:checked {
   100% {
     transform: translateY(-100%);
   }
+}
+
+.btm-shadow::before {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.btm-shadow {
+  width: 100%;
+  position: absolute;
+  bottom: 0rem;
+  height: 6rem;
+  z-index: 40;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 5%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* .mm {
+  width: 100%;
+  height: 330px; 
+  background-image: url("@/assets/images/BorderTwo.png");
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+  background-position: center;
+  object-fit: fill;
+} */
+.header-with-border {
+  position: relative;
+  background-color: #000;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-with-border::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 60px;
+  background-image: url("@/assets/images/BorderTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
 }

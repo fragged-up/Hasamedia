@@ -1,9 +1,8 @@
-import FooterLogo from "@/assets/images/logoFooterMobile.png";
 const MobielFooter = () => {
   return (
-    <footer className="container grid grid-rows-[auto] bg-black-primary">
-      <header className="wrapper space-y-6 px-12 py-12">
-        <div className="footer-logo-container max-w-48">
+    <footer className="mx-auto grid w-full grid-rows-[auto] bg-black-primary p-1">
+      <header className="wrapper h-full space-y-6 p-12">
+        <div className="footer-logo-container h-full max-h-[3.1rem] w-full max-w-[15rem] object-cover">
           <div className="footer-logo"></div>
         </div>
 
@@ -13,7 +12,7 @@ const MobielFooter = () => {
           </button>
         </div>
       </header>
-      <nav className="grid grid-cols-2 border-y border-dark-secondary px-8 py-16">
+      <nav className="my-9 grid w-full grid-cols-2 border-y border-dark-secondary px-8 py-16">
         <div className="left-side grid-cols-1">
           <div>
             <h4 className="text-sm text-white-primary font-gilroy-bold">

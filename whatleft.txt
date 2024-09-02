@@ -1,0 +1,13 @@
+1. finish fixing the header fixed that will be aligned with the light image.
+2. remove the layout shifts from the scroll right animation
+3. make shadow on the bottom of the container animation buttom
+4. check about the low image icons - tell him its because of the width size of the icon when decrasing width with css we may loose quality if the image is not svg .. 
+
+so 3 options for number 4 
+
+1. check with background-image if its good we all set (about the logo footer and logo header)
+2. he will convert this image to svg so we can resize it without loose quality 
+3. he make the png image in the same exact size .. 
+
+
+// bonus make him play button in gray play icon for the video ..
