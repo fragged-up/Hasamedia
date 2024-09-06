@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"; // Import Link for navigation
-import Hamburger from "@/assets/icons/hamburger-menu.svg";
 import lbImage from "@/assets/images/BorderTwo.png";
 import HiringIcon from "@/assets/icons/HiringIcon.svg";
 
@@ -24,7 +22,7 @@ const MobileHeader = () => {
         <header className="relative z-20 flex border-b border-[#707070] bg-black px-6 pb-6 pt-3">
           <nav className="my-auto flex w-full items-center justify-between">
             <div className="mobile-logo-container max-h-[6.3rem] w-full max-w-32 sm:max-w-40">
-              <div className="flex h-[1.985rem] w-full bg-header-logo-mobile bg-no-repeat sm:h-10"></div>
+              <div className="flex h-[2.3rem] w-full bg-header-logo-mobile bg-no-repeat sm:h-10"></div>
             </div>
           </nav>
         </header>
