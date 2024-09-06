@@ -1,15 +1,10 @@
-import FooterLogo from "@/assets/images/logoFooterMobile.png";
 const MobielFooter = () => {
   return (
     <footer className="container mx-auto grid max-w-[70%] grid-rows-[auto] bg-black-primary">
       <header className="wrapper px-12 py-12">
         <div className="flex items-center justify-between">
-          <div className="cont-desk-logo max-h-12">
-            <img
-              src={FooterLogo}
-              alt="logoFooterDesk"
-              className="h-12 w-full"
-            />
+          <div className="cont-desk-logo">
+            <div className="bg-footer-logo-mobile h-[3.83rem] w-[13.625rem] bg-no-repeat"></div>
           </div>
           <div className="desk-btn-container">
             <button className="footer-btn-cnt w-full rounded-lg px-8 py-2 text-center text-sm text-white-primary font-gilroy-black">

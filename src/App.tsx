@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import AccountPage from "./pages/Account";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import FreeWebsiteReview from "./pages/FreeWebsiteReview";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/TermsOfService" element={<TermsOfService />} />
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/free-website-review" element={<FreeWebsiteReview />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -5,16 +5,15 @@ import { Link } from "react-router-dom";
 
 const DesktopHeader = () => {
   return (
-    <div className="">
+    <>
       <div className="fixed z-50 w-full">
-        <div className="relative max-h-[15rem]">
+        <div className="relative max-h-[23rem]">
           <img
             src={lbImage}
             alt="Crazy Border"
             className="absolute top-16 mx-auto flex min-w-full translate-y-9 lg:max-h-[10rem] xl:max-h-[14rem] xl:translate-y-0"
           />
         </div>
-
         <div className="flex items-center justify-center bg-black pb-2 pt-4">
           <div className="mr-1.5">
             <img
@@ -32,6 +31,7 @@ const DesktopHeader = () => {
             </p>
           </div>
         </div>
+
         <header className="relative flex items-center justify-between border-b border-[#707070] bg-black">
           <div className="flex w-full items-center justify-between px-12 py-8">
             <div className="left-side">
@@ -55,66 +55,8 @@ const DesktopHeader = () => {
           </div>
         </header>
       </div>
-    </div>
+    </>
   );
 };
 
 export default DesktopHeader;
-{
-  /* <header className="relative flex items-center justify-between border-b border-[#707070] bg-black">
-<div className="flex w-full items-center justify-between px-12 py-8">
-  <div className="left-side">
-    <img
-      src={desktopLogo}
-      alt="desktopLogo"
-      className="h-[61px] w-[233px]"
-    />
-  </div>
-
-  <div className="right-side">
-    <div className="desk-rev-btn flex items-center justify-center text-nowrap rounded-lg px-4 py-2">
-      <Link
-        to="/free-website-review"
-        className="text-center text-white transition duration-300 font-gilroy-black"
-      >
-        Free Website Review
-      </Link>
-    </div>
-  </div>
-</div>
-</header> */
-}
-
-{
-  /* <div className="flex items-center justify-center bg-black pb-2 pt-4">
-<div className="mr-1.5">
-  <img
-    src={HiringIcon}
-    alt="HiringIcon"
-    className="h-[12.85px] w-[12.85px]"
-  />
-</div>
-<div className="flex gap-1.5">
-  <p className="text-center text-base text-white font-gilroy-medium">
-    We are hiring soon!
-  </p>
-  <p className="text-center text-base text-white font-gilroy-regular">
-    Keep in touch, we may be open for business in the US soon
-  </p>
-</div>
-</div> */
-}
-
-{
-  /* <>
-<div className="fixed z-50 w-full">
-  <div className="relative max-h-[23rem]">
-    <img
-      src={lbImage}
-      alt="Crazy Border"
-      className="absolute top-16 mx-auto flex min-w-full translate-y-9 lg:max-h-[10rem] xl:max-h-[14rem] xl:translate-y-0"
-    />
-  </div>
-</div>
-</> */
-}

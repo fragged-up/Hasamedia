@@ -2,8 +2,8 @@ const MobielFooter = () => {
   return (
     <footer className="mx-auto grid w-full grid-rows-[auto] bg-black-primary p-1">
       <header className="wrapper h-full space-y-6 p-12">
-        <div className="footer-logo-container h-full max-h-[3.1rem] w-full max-w-[15rem] object-cover">
-          <div className="footer-logo"></div>
+        <div className="footer-logo-container h-full max-h-[4rem] w-full max-w-[15rem] object-cover">
+          <div className="bg-footer-logo-mobile h-[3.83rem] w-[13.625rem] bg-no-repeat"></div>
         </div>
 
         <div className="w-full">

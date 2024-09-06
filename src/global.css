@@ -162,18 +162,11 @@ h6 {
   max-height: 46px;
 }
 
-input[type="checkbox"] {
-  appearance: none;
+.hiringBox {
   width: 16px;
   height: 16px;
   background-color: gray;
   border: 2px solid #000;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-  background-color: #000;
-  border-color: #000;
 }
 
 .video-section {
@@ -395,4 +388,21 @@ input[type="checkbox"]:checked {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+}
+
+.tryness {
+  margin-top: 0;
+  height: 20px;
+  max-height: 20px;
+  border-width: 70px; /* Set the width of the border */
+  border-style: solid; /* Required to render the border */
+  border-image-source: url("@/assets/images/lightBlueDesk.png");
+  border-image-slice: 30 fill; /* Slice the image and fill the center */
+  border-image-width: 15px; /* Set the image width across the full border width */
+  border-image-repeat: stretch; /* Stretch the image to fit the entire width and height */
+  width: 100%; /* The container width is 100% */
+  /* transform: translateY(-25%); */
+  position: sticky;
+  top: 0;
+  display: flex;
 }

@@ -5,13 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "header-logo-mobile": "url('./assets/images/logoMobile.png')",
+        "header-logo-mobile": "url('./assets/icons/hasa-logo-header.svg')",
+        "footer-logo-mobile": "url('./assets/icons/hasa-logo-footer.svg')",
       },
       backgroundSize: {
         "header-logo-mobile": "100%",
+        "footer-logo-mobile": "100%",
       },
       backgroundPosition: {
         "header-logo-mobile": "center",
+        "footer-logo-mobile": "center",
       },
 
       colors: {
