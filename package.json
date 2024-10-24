@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://localhost:5001",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -10,13 +11,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-oauth/google": "^0.12.1",
-    "axios": "^1.7.5",
+    "@uidotdev/usehooks": "^2.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.26.1"
   },
+  "browserslist": [
+    "last 2 Safari versions",
+    "last 2 iOS versions",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "> 1%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@types/node": "^22.5.0",
     "@types/react": "^18.3.3",

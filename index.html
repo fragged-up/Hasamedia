@@ -2,19 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Set the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Cross-platform status bar color -->
+    <meta name="theme-color" content="#000000" />
+    <!-- For Chrome, Firefox, Edge, Android -->
+    <meta name="msapplication-navbutton-color" content="#000000" />
+    <!-- For Internet Explorer/Edge -->
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <!-- For iOS Safari -->
+
+    <!-- Updated version: Enable web app mode on all mobile devices -->
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- Overwrite theme color -->
+    <meta name="msapplication-TileColor" content="#000000" />
+    <!-- Ensure consistent color on Microsoft browsers -->
+
     <title>HasaMedia.io</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>

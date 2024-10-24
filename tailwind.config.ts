@@ -45,8 +45,11 @@ const config: Config = {
         gilroy: ["Gilroy", "sans-serif"],
       },
       screens: {
+        "small-mobile": { max: "400px" },
         "max-md": { max: "768px" },
         "max-sm": { max: "640px" },
+        "lap-range": { min: "1025px", max: "1330px" },
+        "end-lap-range": { min: "1330px", max: "1570px" },
       },
     },
   },
@@ -56,18 +59,22 @@ const config: Config = {
         ".font-gilroy-regular": {
           fontFamily: "Gilroy, sans-serif",
           fontWeight: "400",
+          fontDisplay: "swap",
         },
         ".font-gilroy-medium": {
           fontFamily: "Gilroy, sans-serif",
           fontWeight: "500",
+          fontDisplay: "swap",
         },
         ".font-gilroy-bold": {
           fontFamily: "Gilroy, sans-serif",
           fontWeight: "700",
+          fontDisplay: "swap",
         },
         ".font-gilroy-black": {
           fontFamily: "Gilroy, sans-serif",
           fontWeight: "900",
+          // fontDisplay: "swap",
         },
       };
       addUtilities(newFontWeights);

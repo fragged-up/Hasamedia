@@ -17,7 +17,7 @@ const ReviewBox: React.FC<ReviewBoxProps> = ({
           <img
             src={avatar}
             alt={`${name}'s avatar`}
-            className="max-h-[2.5rem] max-w-[2.5rem] rounded-full"
+            className="h-[2.3755rem] w-[2.3755rem] rounded-full"
           />
         </div>
         <div className="flex flex-col text-left sm:pt-1">

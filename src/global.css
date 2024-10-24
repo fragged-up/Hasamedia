@@ -8,27 +8,28 @@
   src: url("assets/fonts/gilroy-regular.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gilroy";
   src: url("assets/fonts/gilroy-medium.ttf") format("truetype");
   font-weight: 500; /* Medium */
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gilroy";
   src: url("assets/fonts/gilroy-bold.ttf") format("truetype");
   font-weight: 700; /* Bold */
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gilroy";
   src: url("assets/fonts/gilroy-black.ttf") format("truetype");
   font-weight: 900; /* Black */
-  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -58,28 +59,32 @@
 }
 
 /* Global Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 /* CSS Variables */
 
 html,
 body {
-  height: 100%;
+  background-color: black;
+  overscroll-behavior: hidden;
+
   width: 100%;
 }
+
 body {
+  height: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
+
 img,
 picture,
 video,
@@ -97,7 +102,13 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
-
+#root {
+  display: flex;
+  flex-direction: column; /* Stack header, content, and footer vertically */
+  height: 100%; /* Full height of the viewport */
+  width: 100%;
+  -webkit-overflow-scrolling: touch; /* גלילה חלקה ב-iOS */
+}
 .block-section {
   opacity: 1;
   border: 2px solid #05ace73e;
@@ -106,7 +117,6 @@ h6 {
   -webkit-backdrop-filter: blur(33px);
 }
 
-/* Start Buttons Containers Styling */
 .find-out-btn-container {
   background: transparent linear-gradient(90deg, #000000 0%, #3d2e5d 100%) 0% 0%
     no-repeat padding-box;
@@ -121,7 +131,6 @@ h6 {
     no-repeat;
   opacity: 1;
 }
-/* End Buttons Containers Styling */
 
 .gradient-hero-text {
   background: transparent linear-gradient(75deg, #ffffff 0%, #808080 100%) 0% 0%
@@ -142,6 +151,11 @@ h6 {
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
   text-align: center;
+}
+@media (max-width: 670px) {
+  .recive-cta {
+    max-width: 192px;
+  }
 }
 
 .footer-btn-cnt {
@@ -197,12 +211,12 @@ h6 {
 }
 
 .play-button {
+  width: 85px;
+  height: 85px;
   background-image: url("@/assets/icons/PlayButton.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 85px;
-  height: 85px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -224,8 +238,8 @@ h6 {
 
 .desk-rev-btn {
   background: transparent
-    linear-gradient(240deg, #00a8e2 0%, #00beff 63%, #ffffff 134%) 0% 0%
-    no-repeat;
+    linear-gradient(240deg, #00a8e2 0%, #00beff 40.5%, #ffffff 128%) 0% 0%
+    no-repeat padding-box;
 }
 .dialog-text {
   background-color: black;
@@ -239,6 +253,9 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
+}
+.scroll-right-content {
+  filter: grayscale(100%);
 }
 
 @media (max-width: 768px) {
@@ -255,7 +272,8 @@ h6 {
     width: max-content;
     gap: 2rem;
     scroll-behavior: smooth;
-    animation: scroll-right-animation 4s linear infinite;
+
+    animation: scroll-right-animation 10s linear infinite;
   }
 
   .scroll-right-image {
@@ -321,7 +339,7 @@ h6 {
 .scroll-track {
   display: flex;
   flex-direction: column;
-  animation: scroll-track-animation 200s linear infinite;
+  animation: scroll-track-animation 400s linear infinite;
 }
 
 .scroll-item {
@@ -361,15 +379,6 @@ h6 {
   );
 }
 
-/* .mm {
-  width: 100%;
-  height: 330px; 
-  background-image: url("@/assets/images/BorderTwo.png");
-  background-repeat: no-repeat;
-  background-size: 100%, 100%;
-  background-position: center;
-  object-fit: fill;
-} */
 .header-with-border {
   position: relative;
   background-color: #000;
@@ -390,19 +399,340 @@ h6 {
   z-index: 0;
 }
 
-.tryness {
-  margin-top: 0;
-  height: 20px;
-  max-height: 20px;
-  border-width: 70px; /* Set the width of the border */
-  border-style: solid; /* Required to render the border */
-  border-image-source: url("@/assets/images/lightBlueDesk.png");
-  border-image-slice: 30 fill; /* Slice the image and fill the center */
-  border-image-width: 15px; /* Set the image width across the full border width */
-  border-image-repeat: stretch; /* Stretch the image to fit the entire width and height */
-  width: 100%; /* The container width is 100% */
-  /* transform: translateY(-25%); */
-  position: sticky;
-  top: 0;
+.form-header {
+  text-align: center;
+  color: white;
+}
+
+.choice-fix {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-form {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  font-size: 0.9375rem;
+  max-width: 15.75rem;
+  max-height: 2.315625rem;
+  width: 15.75rem;
+  color: white;
+  text-align: center;
+  margin-inline: auto;
+  background: transparent
+    linear-gradient(249deg, #7a3bff 0%, #7a3bff 19%, #ad4eff 100%) 0% 0%
+    no-repeat padding-box;
+  border-radius: 6px;
+  box-shadow: 0px 1px 12px rgba(255, 255, 255, 0.381);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+@media (max-width: 760px) {
+  .btn-form {
+    max-width: 15.6875rem;
+  }
+}
+.btn-send {
+  background: transparent
+    linear-gradient(246deg, #82bc8b 0%, #8cc695 23%, #aed5b4 96%, #ffffff 100%)
+    0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  opacity: 1;
+  padding-inline: 0.5rem;
+  padding-block: 0.7rem;
+  width: 100%;
+  max-width: 15.75rem;
+  margin-inline: auto;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.blue-gradient {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  font-size: 0.9375rem;
+  max-width: 15.75rem;
+  width: 15.75rem;
+  color: white;
+  text-align: center;
+  margin-inline: auto;
+  background: transparent
+    linear-gradient(249deg, #00a8e2 0%, #00beff 23%, #ffffff 130%) 0% 0%
+    no-repeat padding-box;
+  border-radius: 6px;
+  box-shadow: 0px 1px 12px #ffffff79;
+  opacity: 1;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+@media (max-width: 400px) {
+  .blue-gradient {
+    width: 100% !important;
+    padding-inline: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.wrap-form-box {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.tab {
+  padding-inline: 1rem;
+  border-radius: 1rem;
+  background-color: #1e1e1e; /* Default background for tabs */
+  color: #fff;
+  width: 6.625rem;
+  max-width: 6.625rem;
+  font-size: 0.8125rem;
+  text-align: center;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+.form-group {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+.tab-active {
+  font-size: 13px;
+  background: transparent linear-gradient(180deg, #7a3bff 0%, #3d1e80 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 9px;
+  opacity: 1;
+}
+
+.tab-completed {
+  background: #000000 0% 0% no-repeat padding-box;
+  border: 0.5px solid #292929;
+  border-radius: 10px;
+  opacity: 1;
+  color: #383838;
+}
+
+.purple-background {
+  background: #7a3bff;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+/* Existing styles with added focus animations */
+.url-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #7a3bff8b;
+  background-color: black;
+  max-width: 15.75rem;
+  margin-inline: auto;
+  color: #fff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.url-input::placeholder {
+  color: #ffffff;
+  opacity: 0.25;
+}
+
+.url-input:active {
+  background-color: black;
+}
+
+.url-input:focus {
+  outline: none;
+  background-color: black !important;
+  /* transform: scale(1.01); */
+  box-shadow: 0 0 8px rgba(122, 59, 255, 0.6); /* Purple glowing effect */
+  max-width: 15.75rem; /* Keep this to prevent overflow */
+}
+/* Rest of your existing styles unchanged */
+#marketing-communications {
+  accent-color: #c9c9c9;
+}
+
+.error-input {
+  border-color: red;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out; /* טרנזישן נוסף על ה-error */
+  opacity: 1;
+}
+
+.error-text {
+  color: #b70000;
+  text-align: center;
+}
+
+.form-checkbox input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+.form-checkbox .checkmark {
+  width: 15px; /* Slightly larger size */
+  height: 14px; /* Slightly larger size */
+  background-color: #4a4a4a; /* Default gray background */
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Darker background color when checked */
+.form-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #2a2a2a; /* Darker gray when checked */
+}
+
+/* Create the checkmark */
+.form-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  background-size: cover;
+  background-image: url("@/assets/icons/newCheckMark.svg");
+  display: none;
+}
+
+/* Show the new image when the checkbox is checked */
+.form-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+  background-image: url("@/assets/icons/newCheckMark.svg");
+  background-size: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover effect */
+.form-checkbox .checkmark:hover {
+  background-color: #5a5a5a; /* Slightly lighter gray on hover */
+}
+.darken-lb {
+  height: 3rem;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("@/assets/images/BorderTwo.png");
+  position: relative;
+  border-radius: 8px;
+  /* overflow: hidden; */
+}
+@media (min-width: 635px) {
+  .darken-lb {
+    height: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .darken-lb {
+    overflow-y: hidden;
+    border: none;
+  }
+
+  .hero-boster {
+    font-size: 72px;
+  }
+  .hero-solution {
+    font-size: 55px;
+  }
+}
+
+.newPurple {
+  background: transparent linear-gradient(180deg, #7a3bff 0%, #3d1e80 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 9px;
+}
+
+.step-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Increase timing slightly */
+  width: 100%;
+}
+
+.step {
+  min-width: 100%;
+  flex-shrink: 0;
+  transition: opacity 0.5s ease-in-out; /* Match the timing with container */
+}
+
+.step-active {
+  opacity: 1;
+}
+
+.step:not(.step-active) {
+  opacity: 0;
+}
+
+.contact-us-border {
+  background: #00151c;
+  border-radius: 23px;
+  border: 1px solid #7a3bff8b;
+  box-shadow: 0px 3px 6px #8900ffa2;
+}
+
+.contact-us-border.rounded-t-md {
+  border-bottom: none;
+}
+
+.options-contact {
+  border-radius: 24px;
+  border-top: none;
+}
+
+.customated {
+  border-radius: 24px;
+}
+.bt-none {
+  border-top: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.add-border {
+  border-radius: 23px;
+  border: 1px solid #7a3bff8b;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0px 3px 6px #8900ffa2;
+}
+
+.options-bordering {
+  border-color: rgba(255, 255, 255, 0.25);
+  padding-block: 15px;
+}
+
+@media (min-width: 625px) {
+  .contact-page-content {
+    margin-block: 3rem;
+  }
+}
+
+.no-focus-outline:focus {
+  outline: none;
 }

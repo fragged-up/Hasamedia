@@ -4,6 +4,7 @@ import VideoSection from "../components/UI/VideoSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Reviews from "@/components/UI/Reviews";
+import { Link } from "react-router-dom";
 
 const blocksTexts = [
   {
@@ -28,39 +29,46 @@ const blocksTexts = [
 const Home = () => {
   return (
     <>
-      <Header />
+      <header>
+        <Header />
+      </header>
       {/* <nav className="bg-black-primary sm:my-28 sm:mb-[6rem] sm:mt-[8rem] lg:mb-0 lg:mt-0 max-sm:mb-[3.3rem] max-sm:mt-[9rem]"> */}
       {/* <div className="w-full overflow-x-hidden bg-black py-1 max-sm:mt-[calc(4%)]"> */}
-      <div>
+      <div className="grid w-full place-items-center">
         <div className="w-full overflow-x-hidden bg-black py-1">
           <nav className="bg-black-primary">
-            <div className="hero-wrapper sm:mt-[11rem] lg:mt-[17rem] max-sm:mt-[9rem]">
+            <div className="hero-wrapper mt-[10.5rem] sm:mt-[12.8rem] lg:mt-[17rem]">
               <div className="text-hero-wrap">
-                <div className="py-4 lg:pb-6 lg:pt-0">
-                  <h1 className="gradient-hero-text text-center text-[1.75rem] font-gilroy-black sm:text-[2.6rem] lg:text-[2.8rem]">
+                <div className="pb-8 pt-4 lg:pb-[3.75rem] lg:pt-0 xl:pt-4">
+                  <h1 className="gradient-hero-text hero-solution hero-boster xl:text-[4.5rem]: text-center text-[1.75rem] font-gilroy-black sm:text-[2.6rem] lg:text-[3.5rem] lg:leading-[3.5rem] xl:text-[4.5rem] xl:leading-[4.5rem]">
                     Build, Grow, Manage.
                   </h1>
-                  <h2 className="gradient-hero-text text-center text-base font-gilroy-black sm:text-3xl">
+                  <h2 className="gradient-hero-text text-center text-base font-gilroy-black sm:text-3xl lg:text-[3rem] lg:leading-[4rem] xl:text-[3.4375rem] xl:leading-[4rem]">
                     Your One-Step Solution for Digital Success.
                   </h2>
                 </div>
               </div>
 
               <div className="mx-auto flex w-[90%] flex-col py-0 sm:py-1">
-                <p className="text-center text-xs text-white font-gilroy-bold sm:text-xl lg:text-2xl">
+                <p className="text-center text-xs text-white font-gilroy-bold sm:text-xl lg:text-2xl lg:leading-[2rem]">
                   From Concept to Launch, We Empower Your Digital Journey.
                 </p>
-                <p className="text-wrap text-center text-[.625rem] text-white font-gilroy-regular sm:text-sm lg:text-xl max-md:text-white">
-                  Whether you’re starting from scratch or looking to enhance an
-                  existing platform, <br className="md:block max-md:hidden" />{" "}
-                  we provide a comprehensive suite of services to build, grow,
-                  and manage your digital presence.
-                </p>
+                <div className="h-[24px]">
+                  <p className="text-wrap text-center text-[.625rem] text-white font-gilroy-regular sm:text-sm lg:text-[1.5rem] lg:leading-[2rem] max-md:text-white">
+                    Whether you’re starting from scratch or looking to enhance
+                    an existing platform,{" "}
+                    <br className="md:block max-md:hidden" /> we provide a
+                    comprehensive suite of services to build, grow, and manage
+                    your digital presence.
+                  </p>
+                </div>
               </div>
-              <div className="btn-container flex items-center justify-center sm:my-12 max-sm:my-5">
-                <button className="recive-cta px-6 py-1.5 text-center text-white-primary font-gilroy-bold sm:max-w-96 sm:text-xl max-sm:max-w-48 max-sm:text-xs">
-                  Receive Free Evaluation
-                </button>
+              <div className="btn-container mx-auto mb-[5.5rem] mt-12 flex w-full items-center justify-center md:mt-16 lg:mb-36 lg:mt-[7.5rem] max-md:max-w-[192px]">
+                <Link to="/Lead">
+                  <button className="recive-cta text-nowrap px-6 py-1.5 text-center text-white-primary font-gilroy-bold sm:max-w-96 sm:text-xl lg:w-[347px] lg:p-4 lg:py-3 lg:text-[24px] max-sm:w-[192px] max-sm:max-w-48 max-sm:text-xs">
+                    Receive Free Evaluation
+                  </button>
+                </Link>
               </div>
             </div>
           </nav>
@@ -101,8 +109,8 @@ const Home = () => {
               ))}
             </div>
             <section className="mx-auto w-4/5 bg-black">
-              <div className="flex items-center justify-center">
-                <h1 className="my-10 text-nowrap text-center text-[1.3rem] text-white font-gilroy-black sm:text-4xl lg:text-[3rem]">
+              <div className="flex items-center justify-center max-sm:mb-[1.1rem] max-sm:mt-[7.5rem]">
+                <h1 className="my-10 text-nowrap text-center text-[1.3rem] text-white font-gilroy-black sm:text-4xl lg:text-[3rem] max-sm:my-0">
                   What our customers say about us
                 </h1>
               </div>

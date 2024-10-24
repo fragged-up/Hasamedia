@@ -1,4 +1,3 @@
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 import MobileHeader from "./UI/MobileHeader";
 import DesktopHeader from "./UI/DesktopHeader";

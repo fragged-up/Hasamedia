@@ -1,18 +1,25 @@
+import { Link, useNavigate } from "react-router-dom";
 const MobielFooter = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/ContactUs");
+  };
+
   return (
     <footer className="mx-auto grid w-full grid-rows-[auto] bg-black-primary p-1">
-      <header className="wrapper h-full space-y-6 p-12">
+      <header className="wrapper mt-[8.75rem] h-full space-y-6 p-12 pb-[2.33rem]">
         <div className="footer-logo-container h-full max-h-[4rem] w-full max-w-[15rem] object-cover">
-          <div className="bg-footer-logo-mobile h-[3.83rem] w-[13.625rem] bg-no-repeat"></div>
+          <div className="h-[3.83rem] w-[13.625rem] bg-footer-logo-mobile bg-no-repeat"></div>
         </div>
 
         <div className="w-full">
           <button className="footer-btn-cnt w-full rounded-lg px-8 py-2 text-center text-sm text-white-primary font-gilroy-black">
-            Get My Free Review
+            <Link to="/Lead">Get My Free Review</Link>
           </button>
         </div>
       </header>
-      <nav className="my-9 grid w-full grid-cols-2 border-y border-dark-secondary px-8 py-16">
+      <nav className="grid w-full grid-cols-2 border-t border-dark-secondary px-8 py-16">
         <div className="left-side grid-cols-1">
           <div>
             <h4 className="text-sm text-white-primary font-gilroy-bold">
@@ -22,7 +29,10 @@ const MobielFooter = () => {
               <p className="text-xs text-white-secondary font-gilroy-regular">
                 Blog
               </p>
-              <p className="text-xs text-white-secondary font-gilroy-regular">
+              <p
+                className="cursor-pointer text-xs text-white-secondary font-gilroy-regular"
+                onClick={handleNavigation}
+              >
                 Contact
               </p>
               <p className="text-xs text-white-secondary font-gilroy-regular">
@@ -54,28 +64,57 @@ const MobielFooter = () => {
             </h4>
             <div className="space-y-1 py-4">
               <p className="text-xs text-white-secondary font-gilroy-regular">
-                Facebook
+                <a
+                  href="https://www.facebook.com/profile.php?id=61563268386310"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
               </p>
               <p className="text-xs text-white-secondary font-gilroy-regular">
-                Instagram
+                <a
+                  href="https://www.instagram.com/hasamedia.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </p>
+
+              <p className="text-xs text-white-secondary font-gilroy-regular">
+                <a
+                  href="https://www.linkedin.com/company/hasamedia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Linkedin
+                </a>
               </p>
               <p className="text-xs text-white-secondary font-gilroy-regular">
-                Twitter
+                <a
+                  href="https://www.tiktok.com/@hasamedia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Tiktok
+                </a>
               </p>
               <p className="text-xs text-white-secondary font-gilroy-regular">
-                Linkedin
-              </p>
-              <p className="text-xs text-white-secondary font-gilroy-regular">
-                Tiktok
-              </p>
-              <p className="text-xs text-white-secondary font-gilroy-regular">
-                Youtube
+                <a
+                  href="https://www.youtube.com/@HasaMediaOfficial"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Youtube
+                </a>
               </p>
             </div>
           </div>
         </div>
       </nav>
-      <div className="flex items-center justify-center py-8">
+      {/* h-[6.031rem] */}
+      <div className="flex h-[6.031rem] items-center justify-center border-t border-dark-secondary">
         <p className="text-center text-xs text-white-primary font-gilroy-medium">
           &copy; 2024 Hasa Media LLC. All rights reserved.
         </p>
