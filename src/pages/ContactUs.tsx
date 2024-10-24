@@ -151,7 +151,7 @@ export default function ContactUs() {
     formData.append("token", token);
     // Send request to backend
     try {
-      const response = await fetch("http://localhost:8000/emailHandler.php", {
+      const response = await fetch("https://hasamedia.io/emailHandler.php", {
         method: "POST",
         body: formData,
       });

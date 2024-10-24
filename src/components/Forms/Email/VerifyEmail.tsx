@@ -17,7 +17,7 @@ export default function VerifyEmail({ token }: { token: any }) {
           verificationData.append(key, tokenData[key]);
         });
 
-        const response = await fetch("/verify.php", {
+        const response = await fetch("https://hasamedia.io/verify.php", {
           method: "POST",
           body: verificationData,
         });
