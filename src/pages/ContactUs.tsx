@@ -22,7 +22,7 @@ export default function ContactUs() {
     fullName: "",
     email: "",
     phoneNumber: "",
-    service: "",
+    services: "",
   });
   const resetError = (field) => {
     setTimeout(() => {
@@ -109,7 +109,7 @@ export default function ContactUs() {
       stepFiveData.services === "What are you looking for?" ||
       !stepFiveData.services
     ) {
-      newErrors.service = "Please select a valid option.";
+      newErrors.services = "Please select a valid option.";
       isValid = false;
       resetError("services");
     }
@@ -223,8 +223,10 @@ export default function ContactUs() {
                 onOptionSelect={handleOptionSelect}
               />
             </div>
-            {errors.service && (
-              <p className="error-text font-gilroy-regular">{errors.service}</p>
+            {errors.services && (
+              <p className="error-text font-gilroy-regular">
+                {errors.services}
+              </p>
             )}
             {/* Input Fields */}
             <input
