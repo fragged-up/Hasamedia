@@ -8,7 +8,6 @@ const encodeObjectToBase64 = (obj: object) => {
   return btoa(encodeURIComponent(jsonString));
 };
 export default function ContactUs() {
-  // Define state variables
   useLockBodyScroll();
 
   const [currentStep, setCurrentStep] = useState(1);
@@ -16,7 +15,7 @@ export default function ContactUs() {
     fullName: "",
     email: "",
     phoneNumber: "",
-    service: "", // Added service for dropdown
+    services: "", // Added service for dropdown
   });
 
   const [errors, setErrors] = useState({
@@ -47,7 +46,7 @@ export default function ContactUs() {
     setSelectedOption(option);
     setStepFiveData((prevData) => ({
       ...prevData,
-      service: option,
+      services: option,
     }));
     setDropdownOpen(false);
   };
@@ -107,12 +106,12 @@ export default function ContactUs() {
       newErrors.phoneNumber = "";
     }
     if (
-      stepFiveData.service === "What are you looking for?" ||
-      !stepFiveData.service
+      stepFiveData.services === "What are you looking for?" ||
+      !stepFiveData.services
     ) {
       newErrors.service = "Please select a valid option.";
       isValid = false;
-      resetError("service");
+      resetError("services");
     }
 
     setErrors(newErrors);
@@ -131,7 +130,7 @@ export default function ContactUs() {
       fullName: stepFiveData.fullName,
       email: stepFiveData.email,
       phoneNumber: stepFiveData.phoneNumber,
-      service: stepFiveData.service, // This should hold the selected service
+      services: stepFiveData.services, // This should hold the selected service
     };
 
     const encodeData = {
